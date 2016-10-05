@@ -2,6 +2,8 @@
 # Faça um programa que calcule o aumento de um salário.
 # Deve solicitar o valor do salário e a porcentagem de aumento
 
+from __future__ import division
+
 
 class SalaryRaise(object):
 
@@ -9,7 +11,6 @@ class SalaryRaise(object):
         return 1.0 + (percent / 100.0)
 
     def salary_raise(self, salary, percent):
-        porcentagem = percent / 100.0
-        porcentagem = 1.0 + porcentagem
-        new_salary = salary * porcentagem
+        new_raise = 1.0 + (percent / 100.0)
+        new_salary = salary * new_raise
         return int(new_salary)
